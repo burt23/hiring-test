@@ -1,3 +1,4 @@
 /pair-programming/vendor
+/node_modules
 .idea/*
 

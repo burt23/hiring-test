@@ -1,0 +1,27 @@
+.app {
+  text-align: center;
+}
+
+.app__logo {
+  height: 60px;
+}
+
+.app__header {
+  background-color: rgb(192, 163, 141);
+  height: 130px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #d3d3d3;
+}
+
+.app__title {
+  font-size: 1.2em;
+}
+
+.app__intro {
+  font-size: large;
+}
