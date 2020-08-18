@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddToCartButton should render the AddToCartButton Component correctly 1`] = `
+<button
+  className="button is-medium is-fullwidth add-to-cart"
+  onClick={[Function]}
+>
+  Add to Cart
+</button>
+`;

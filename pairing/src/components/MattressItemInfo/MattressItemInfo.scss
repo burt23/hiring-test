@@ -1,0 +1,21 @@
+.details {
+  font-weight: bold !important;
+
+  @include tablet {
+    padding-top: 2rem;
+  }
+
+  .is-right-text {
+    @include tablet {
+      text-align: right;
+    }
+  }
+
+  .stars {
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+}

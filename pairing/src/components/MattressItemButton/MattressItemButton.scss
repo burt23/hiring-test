@@ -1,0 +1,19 @@
+.mattress {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  button {
+    color: $dawn;
+  }
+
+  .is-active {
+    background-color: $dawn;
+    color: $white !important;
+  }
+
+  .break{
+    word-break: break-all;
+    white-space: normal;
+    height: auto;
+  }
+}

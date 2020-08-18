@@ -1,0 +1,73 @@
+.navbar {
+  border-bottom: solid 1px $dawn;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+
+  @include desktop {
+    padding: 25px;
+  }
+
+  .navbar-brand {
+
+    .navbar-item {
+      svg {
+        @include mobile {
+          height: 17px;
+          width: 80px;
+        }
+
+        @include tablet {
+          height: 38px;
+          width: 180px;
+        }
+      }
+    }
+
+    .cart {
+      position: absolute;
+      right: 0;
+
+      @include tablet {
+        right: 25px;
+      }
+
+      svg {
+        @include mobile {
+          height: 25px;
+          width: 25px;
+        }
+
+        @include tablet {
+          height: 35px;
+          width: 35px;
+        }
+
+        @include desktop {
+          height: 50px;
+          width: 50px;
+        }
+
+      }
+
+      .mattress-count {
+        background-color: $whiskey;
+        color: $white;
+        border-radius: 50%;
+        position: absolute;
+        padding: 2px;
+        right: 0.25rem;
+        top: 0.10rem;
+
+        @include tablet {
+          padding: 6px;
+          right: 0;
+          top: 0;
+        }
+
+        @include desktop {
+          padding: 8px;
+        }
+
+      }
+    }
+  }
+}

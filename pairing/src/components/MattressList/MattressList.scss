@@ -1,0 +1,25 @@
+.title {
+  font-family: 'Source Serif Pro', serif;
+
+  @include mobile {
+    text-align: center;
+  }
+
+  @include tablet {
+    padding-bottom: 5rem;
+  }
+}
+
+.subtitle {
+  font-weight: bold !important;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.cart {
+  @include tablet {
+    padding-top: 2rem;
+  }
+}

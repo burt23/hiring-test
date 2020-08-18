@@ -1,0 +1,15 @@
+.section {
+  background-color: $pampas;
+
+  .is-child {
+    background-color: $pampas;
+  }
+
+  .box {
+    box-shadow: none;
+  }
+}
+
+.fade-in {
+  @include fade-in;
+}
