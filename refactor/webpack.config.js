@@ -1,12 +1,9 @@
 const path = require("path")
-const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
-const SCSS_DIR = path.resolve(__dirname, 'src/scss')
-console.log(SCSS_DIR)
 
 module.exports = {
     mode: 'development',
+    devtool: 'inline-source-map',
     entry: path.join(__dirname, "src", "index.jsx"),
     output: {
         path: path.join(__dirname, "public"),
@@ -36,13 +33,8 @@ module.exports = {
         extensions: ['*', '.js', '.jsx']
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({
           filename: 'css/[name].css',
         })
-    ],
-    devServer: {
-        hot: true,
-        historyApiFallback: true
-    }
+    ]
 }

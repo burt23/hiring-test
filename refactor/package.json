@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon --exec babel-node server.js",
+    "server": "nodemon server.js",
     "webpack": "webpack --watch --progress",
-    "start": "npm-run-all --parallel webpack server"
+    "serve": "npm-run-all --parallel webpack server"
   },
   "keywords": [],
   "author": "Jatin Varlyani",
@@ -31,9 +31,9 @@
     "@babel/preset-react": "^7.10.4",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
+    "classnames": "^2.2.6",
     "css-loader": "^4.2.2",
     "file-loader": "^6.0.0",
-    "gulp-babel": "^8.0.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.11.0",
     "node-sass": "^4.14.1",
