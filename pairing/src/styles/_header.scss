@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: $white;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid rgba($black, 0.1);
+    box-shadow: 0 3px 12px 0 $gray;
+  }
+
+  &-container {
+    max-width: $site-max-width;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include from($laptop-m) {
+      width: 90%;
+    }
+
+    &__logo {
+      width: 120px;
+      height: 25px;
+    }
+
+    &__cart-logo {
+      position: relative;
+      width: 25px;
+      height: 25px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      span {
+          position: absolute;
+          top: -30%;
+          right: -50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20px;
+          height: 20px;
+          color: $white;
+          background-color: $cinnamon;
+          border-radius: 50%;
+          font-size: 0.6rem;
+          line-height: 1rem;
+        }
+    }
+  }
+}

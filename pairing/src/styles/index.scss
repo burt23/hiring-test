@@ -1,0 +1,14 @@
+@import "mixins";
+@import "fonts";
+@import "variables";
+
+@import "app";
+@import "layout";
+@import "header";
+@import "choose-mattress";
+
+// disables error overlay
+iframe
+{
+    display: none;
+}
