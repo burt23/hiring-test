@@ -1,0 +1,119 @@
+.product-container {
+  background-color: $primary-color;
+  border-top: 2px solid $quinary-color;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.product {
+  box-sizing: border-box;
+  height: 50%;
+
+  .image-container {
+    margin: auto 0;
+    padding: 30px 55px;
+    text-align: center;
+
+    @include respond(xs) {
+      padding: 30px 20px;
+    }
+  
+    @include respond(sm) {
+      padding: 30px 20px;
+    }
+
+    img {
+      background-size: cover;
+      cursor: pointer;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .description-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include respond(xs) {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    @include respond(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h3 {
+      color: $octonary-color;
+      font-family: "Source Sans Pro", sans-serif;
+      margin-bottom: 20px;
+
+      @include respond(lg) {
+        margin-bottom: 60px;
+      }
+    }
+
+    .select-product {
+      h6 {
+        color: $secondary-color;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      .btn-group {
+        text-align: left;
+      }
+
+      .product-details {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        span {
+            color: $secondary-color;
+        }
+      }
+
+      .add-to-cart-btn {
+        background-color: $cuaternary-color;
+        color: $tertiary-color;
+        margin: 50px 0;
+        width: 100%;
+      }
+    }
+
+    .btn-group {
+      width: 100%;
+  
+      @include respond(xs) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include respond(md) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      border-radius: 0;
+      border: 1px solid $quinary-color;
+      color: $secondary-color;
+      font-family: "Questrial", sans-serif;
+
+      &:active,
+      &:focus {
+        box-shadow: none !important;
+      }
+
+      &:hover,
+      &.active-product {
+        background-color: $quaternary-color;
+        color: $tertiary-color;
+      }
+    }
+  }
+}
