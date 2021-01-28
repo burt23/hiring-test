@@ -1,34 +1,64 @@
-## Mattress Shop Page
+## Mattress Shop Page: A Pairing
 
-- Clone and run local: `yarn && yarn start`
-- Or live demo: https://dsmurl.github.io/mattress-shop-page/
-  - Not currently working due to asset misalignment with github pages
+### Objective
+Build out a cart view to display all items in cart. 
 
-Create a single page React application using the screen shot provided (mock.png) as your guide. Please use the data provided in mattresses.json to populate the mattress data in the application.
+#### Requirements
+1. Create an internal api that fetches from the following external resources and returns a transformed dataset. Use the response as the new source for mattress data.
+   - mattress data: `https://w5uw2yuhpg.execute-api.us-east-1.amazonaws.com/api/products?set=mattresses`
+   - content data: `https://w5uw2yuhpg.execute-api.us-east-1.amazonaws.com/api/products?set=content`
 
-### Requirements:
+2. Create a cart view
 
-1. ✅ Application uses React framework.
-2. ✅ The design should match the mock as best as possible.
-   - ✅ You can use a design system (ex. Bootstrap) if preferred.
-   - ✅ Use a cart icon of your choice.
-3. ✅ The user should have the ability to toggle between mattresses.
-4. ✅ As the mattress selection changes:
-   - ✅ the selected mattress name and price should be reflected below the mattress toggle.
-   - ✅ the selected mattress image should be reflected to the left of the configuration area (images files can be found in /images)
-5. ✅ The "Add to Cart" button should increment the cart item count (in the top right of the view)
-6. ✅ The application you create should be responsive though we have only provided the design for the desktop experience. You are responsible for deciding how the application will scale to a mobile experience. This is your opportunity to be creative.
-7. ✅ Use fonts 'Source Serif Pro' for the "Choose Your Mattress" header and 'Questrial' for body copy. These can be found on google fonts website.
+3. Cart item should have:
+   * label
+   * price
+   * thumbnail
+   * quantity of product in cart
 
-### Bonus Points:
+##### mattress response:
+```
+{
+    "mattresses": {
+        "classic": {
+            "name": "Saatva Classic",
+            "price": 999,
+            "reviewRating": 4.9
+        },
+        "loom": {
+            "name": "Loom &amp; Leaf",
+            "price": 1299,
+            "reviewRating": 4
+        },
+        "zen": {
+            "name": "Zenhaven",
+            "price": 1599,
+            "reviewRating": 4.5
+        }
+    }
+}
+```
 
-1. ✅ Use a css preprocessor if you prefer sass or less.
-2. Display the Review Rating for the selected mattress.
-3. Add animation where you see fit.
-4. Add your own flair to the design.
-5. Add a unit test for the "Add to Cart" functionality.
-
-### Submission
-
-Please submit a public GITHUB repo url or a bundled file of your work to devhiring@saatvamattress.com.
-Please submit a README.md file with your project with instructions on how to get your project up and running and any other miscellaneous items we would need to run.
+##### content response:
+```
+[
+    {
+        "sku": "classic",
+        "label": "<span>Saatva Classic Mattress</span>",
+        "thumbnail": "https://store.saatva.com/media/catalog/product/t/h/thumb_sm_reg_2x_1_40.jpg",
+        "imageFileName": "classic-carousel.jpg"
+    },
+    {
+        "sku": "loom",
+        "label": "<span>Loom & Leaf Mattress</span>",
+        "thumbnail": "https://store.saatva.com/media/catalog/product/t/h/thumb_ll_reg_2x_12.jpg",
+        "imageFileName": "loom-carousel.jpg"
+    },
+    {
+        "sku": "zen",
+        "label": "<span>Zenhaven Mattress</span>",
+        "imageFileName": "zen-carousel.jpg",
+        "thumbnail": "https://store.saatva.com/media/catalog/product/t/h/thumb_zen_reg_2x_4.jpg"
+    }
+]
+```
