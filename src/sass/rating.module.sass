@@ -1,0 +1,45 @@
+@use 'colors'
+
+@mixin rating_bar
+  align-items: center
+  display: flex
+  justify-content: space-between
+  position: absolute
+  width: $width
+
+@mixin star_size
+  height: 16px
+  width: 16px
+
+$height: 16px
+$width: 112px
+
+.container
+  display: flex
+  .row
+    position: relative
+    width: $width
+
+    .background
+      @include rating_bar
+
+      .black_star
+        @include star_size
+        fill: black
+
+    .foreground
+      height: $height
+      overflow: hidden
+      position: relative
+
+    .star_rating
+      @include rating_bar
+
+      .gold_star
+        @include star_size
+        fill: colors.$star-fill
+        stroke: colors.$star-fill
+    
+  .text_points
+    margin-left: 8px
+  

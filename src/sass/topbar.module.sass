@@ -1,0 +1,52 @@
+@use 'colors'
+
+.bar
+  background-color: white
+  border-bottom: 2px solid colors.$border
+  width: 100%
+
+  .container
+    align-items: center
+    display: flex
+    justify-content: space-between
+    margin: auto
+    padding: 48px 16px 24px 16px
+
+    .button
+      background-color: transparent
+      border: none
+      color: colors.$icon-fill
+      margin-left: auto
+      position: relative
+
+      .cartIcon
+        fill: colors.$icon-fill
+        transition: 0.5s
+      
+      &:focus
+        outline: none
+      
+      &:hover
+        .cartIcon
+          fill: colors.$icon-hover-fill
+      
+      .counter
+        align-items: center
+        background-color: colors.$primary
+        border-radius: 50%
+        color: white
+        display: flex
+        font-size: 11px
+        height: 20px
+        justify-content: center
+        left: 20px
+        position: absolute
+        top: -10px
+        width: 20px
+
+    .logo
+      fill: colors.$primary
+
+@media screen and (min-width: 1200px)
+  .container
+    width: 1200px

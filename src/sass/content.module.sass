@@ -1,0 +1,73 @@
+@use 'colors'
+@use 'fonts'
+
+.container
+  width: 100%
+  display: flex
+  font-family: Questrial
+  justify-content: space-between
+  margin: auto
+  padding: 16px
+
+  .image_container
+    flex-grow: 0
+    height: 350px
+    width: 634px
+    overflow: hidden
+
+    img
+      max-height: 100%
+      min-height: 100%
+      transition: opacity 0.5s
+
+  .header
+    font-family: SourceSerifPro
+    font-size: 2.5em
+    margin-bottom: 1em
+
+  .buy_button
+    background-color: colors.$button-background
+    border: 1px solid colors.$button-border
+    color: colors.$button
+    font-size: 1.25em
+    padding: 8px
+    transition: 0.5s
+    width: 100%    
+  
+    &:hover
+      background-color: colors.$button-hover-background
+      border-color: colors.$button-hover-border
+    
+    &:focus
+      outline: none
+
+  .group_label
+    text-transform: uppercase
+
+@media screen and (min-width: 1200px)
+  .container
+    width: 1200px
+
+@media screen and (max-width: 1060px)
+  .container
+    flex-direction: column
+
+    .image_container
+      height: 420px
+      width: 100%
+
+      img
+        max-height: none
+        min-height: 100%
+        min-width: 100%
+
+    .item
+      padding-top: 16px
+
+@media screen and (max-width: 634px)
+  .container
+    .image_container
+      height: 350px
+
+      img
+        max-height: 100%

@@ -1,0 +1,11 @@
+*.sass  eol=lf
+*.scss  eol=lf
+*.html  eol=lf
+*.js    eol=lf
+*.jsx   eol=lf
+*.json  eol=lf
+
+## git-lfs ##
+
+#Image
+*.jpg filter=lfs diff=lfs merge=lfs -text

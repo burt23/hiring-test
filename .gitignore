@@ -1,0 +1,12 @@
+.*
+!.eslintignore
+!.eslintrc
+!.gitattributes
+!.gitignore
+!.proxyrc.json
+!.vscode
+
+*.iml
+coverage
+dist
+node_modules
